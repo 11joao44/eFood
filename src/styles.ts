@@ -3,7 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 export const cores = {
   corPrimary: '#E66767',
   corSecondary: '#FFEBD9',
-  corBackground: '#F5F5F5'
+  corBackground: '#F5F5F5',
+  corTexto: '#ffffff'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -18,6 +19,10 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: ${cores.corBackground};
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .container {

@@ -3,13 +3,18 @@ import styled from 'styled-components'
 import { cores } from '../../../styles'
 import { TagContainer } from '../Tag/styles'
 
-export const Card = styled.div`
+export const Store = styled.div`
+  width: 472px;
+  height: 400px;
   position: relative;
-  line-weight: 22px;
-  border: 1px solid ${cores.corPrimary};
 
   a {
-    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 6px;
+    background-color: ${cores.corPrimary};
+    color: ${cores.corSecondary};
+    border: none;
   }
 
   ${TagContainer} {
@@ -19,11 +24,18 @@ export const Card = styled.div`
     top: 8px;
   }
 `
+export const Capa = styled.img`
+  width: 100%;
+  height: 216px;
+  display: block;
+`
 
 export const Description = styled.div`
   color: ${cores.corPrimary};
   position: relative;
-  padding: 10px;
+  padding: 8px;
+  padding-bottom: 12px;
+  border: 1px solid ${cores.corPrimary};
 
   h3 {
     font-size: 16px;
@@ -47,14 +59,5 @@ export const Description = styled.div`
     margin-bottom: 20px;
     font-size: 14px;
     font-weight: 400;
-  }
-
-  a {
-    font-weight: bold;
-    font-size: 14px;
-    padding: 4px 6px;
-    background-color: ${cores.corPrimary};
-    color: ${cores.corSecondary};
-    border: none;
   }
 `

@@ -6,8 +6,6 @@ const Main = () => (
     <Section>
       <Items className="container">
         <ProductList />
-        <ProductList />
-        <ProductList />
       </Items>
     </Section>
   </main>
