@@ -1,11 +1,11 @@
-import ProductList from '../Blocks/ProductList'
+import Restaurant from '../Blocks/RestaurantList'
 import { Items, Section } from './styles'
 
 const Main = () => (
   <main>
     <Section>
       <Items className="container">
-        <ProductList />
+        <Restaurant />
       </Items>
     </Section>
   </main>

@@ -2,16 +2,19 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const FooterStyle = styled.footer`
-  width: 100%;
-  height: 296px;
   background-color: ${cores.corSecondary};
+  height: 296px;
+  width: 100%;
 
   p {
+    margin: 0 auto;
     text-align: center;
-    font-size: 16px;
+    color: ${cores.corPrimary};
+    max-width: 480px;
+    font-size: 10px;
     font-weight: 400;
     margin-top: 80px;
-    margin-bottom: 40px;
+    line-height: 11.72px;
   }
 `
 

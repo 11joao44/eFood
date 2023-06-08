@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../../styles'
+import { cores } from '../../styles'
 
 export const RestauranteStyle = styled.div`
   position: relative;
@@ -20,46 +20,24 @@ export const RestauranteStyle = styled.div`
     justify-content: space-around;
     height: 100%;
     color: ${cores.corTexto};
+    font-size: 32px;
+    line-height: 37.5px;
 
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
+    h2 {
+      font-weight: 900;
+    }
 
-      h2 {
-        font-size: 32px;
-        font-weight: 900;
-      }
-
-      h3 {
-        font-size: 32px;
-        font-weight: 100;
-        margin-right: 16px;
-      }
-
-      span {
-        font-size: 16px;
-        font-weight: 300;
-      }
-
-      img {
-        margin-left: 8px;
-        width: 15px;
-        height: 15px;
-        z-index: 1;
-      }
+    h3 {
+      font-weight: 100;
     }
   }
 `
-export const Descricao = styled.p`
-  text-align: center;
-`
 export const CardapioStyle = styled.div`
   margin-top: 64px;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 32px;
 `
 export const ImageStyle = styled.img`
   width: 300px;
@@ -74,7 +52,7 @@ export const PratoStyle = styled.div`
   padding: 8px;
 
   img {
-    width: 308px;
+    width: 300px;
     margin-bottom: 8px;
   }
 
@@ -118,7 +96,7 @@ export const Modal = styled.div`
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   &.visivel {
@@ -130,9 +108,11 @@ background-color: ${cores.corPrimary};
 color: ${cores.corTexto};
 align-items: center;
 position: relative;
+width: 100%;
 display: flex;
 padding: 32px;
 gap: 24px;
+
 
   h3 {
       font-size: 14px;
@@ -147,15 +127,6 @@ gap: 24px;
       font-weight: 300;
       line-height: 22px;
     }
-
-    a {
-      text-decoration: none;
-      padding: 4px 8px;
-      background-color: ${cores.corSecondary};
-      color: ${cores.corTexto};
-      font-size: 14px;
-      font-weight: bold;
-    }
   }
 `
 export const ModalImage = styled.img`
@@ -166,23 +137,19 @@ export const ModalImage = styled.img`
 
 export const ModalSobre = styled.div`
   a {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
     background-color: ${cores.corSecondary};
     color: ${cores.corPrimary};
-    padding: 8px 16px;
-    opacity: 0.5;
-    transition: ease-in-out 0.2s;
-
-    &:hover {
-      opacity: 1;
-      transition: ease-in-out 0.2s;
-    }
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16.41px;
+    cursor: pointer;
   }
 `
 
-export const ModalDescription = styled.div``
+export const ModalDescription = styled.div`
+  margin-bottom: 16px;
+`
 
 export const Close = styled.img`
   position: absolute;

@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import background from '../../assets/images/backgroundHome.svg'
 
 export const HeaderStyle = styled.header`
-  width: 100%;
-  height: 384px;
-  background-color: ${cores.corSecondary};
+  background-image: url(${background});
+  padding-bottom: 40px;
   text-align: center;
   padding-top: 64px;
-  padding-bottom: 40px;
+  height: 384px;
+  width: 100%;
 
   img {
     padding-bottom: 136px;

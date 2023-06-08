@@ -1,34 +1,34 @@
 {
-  "titulo": "Sakura Sushi House",
+  "id": 2,
+  "titulo": "Casa das Delícias Árabes",
   "destacado": false,
-  "tipo": "japonês",
-  "avaliacao": 4.9,
-  "id": 3,
-  "descricao": "A Sakura Sushi House é um sofisticado e autêntico restaurante japonês que oferece uma experiência culinária imersiva, transportando os visitantes diretamente para a Terra do Sol Nascente. O ambiente elegante é complementado por um belo jardim japonês, criando uma atmosfera tranquila e serena.",
-  "capa": "https://fake-api-tau.vercel.app/efood/sakura_sushi_house//capa.jpeg",
+  "tipo": "árabe",
+  "avaliacao": 4.8,
+  "descricao": "A Casa das Delícias Árabes é um acolhedor e autêntico restaurante árabe, localizado no coração da cidade, que proporciona uma verdadeira experiência culinária do Oriente Médio. O ambiente é decorado com elementos tradicionais e exóticos, criando uma atmosfera convidativa e confortável.",
+  "capa": "https://fake-api-tau.vercel.app/efood/casa_delicias_arabes//capa.jpeg",
   "cardapio": [
     {
-      "foto": "https://fake-api-tau.vercel.app/efood/sakura_sushi_house//1.jpg",
-      "preco": 89.9,
-      "id": 11,
-      "nome": "Sushi e Sashimi Combinado",
-      "descricao": "O Sushi e Sashimi Combinado é uma seleção de peças cuidadosamente elaboradas por nossos sushimen, incluindo atum, salmão, peixe branco, camarão e outros frutos do mar frescos. Acompanha uma porção de wasabi, gengibre em conserva e molho shoyu, para realçar os sabores naturais dos ingredientes.",
+      "foto": "https://fake-api-tau.vercel.app/efood/casa_delicias_arabes//1.jpg",
+      "preco": 49.9,
+      "id": 8,
+      "nome": "Mezze Platter",
+      "descricao": "O Mezze Platter é uma seleção de aperitivos tradicionais árabes, incluindo homus, babaganush, tabule, falafel, azeitonas e pão pita fresco. Uma combinação deliciosa de sabores e texturas que proporciona uma experiência gastronômica única e diversificada.",
+      "porcao": "2 a 4 pessoas"
+    },
+    {
+      "foto": "https://fake-api-tau.vercel.app/efood/casa_delicias_arabes//2.jpg",
+      "preco": 54.9,
+      "id": 9,
+      "nome": "Kebab de Cordeiro",
+      "descricao": "O Kebab de Cordeiro é feito com pedaços de cordeiro marinados em especiarias e ervas, grelhados à perfeição e servidos com arroz basmati perfumado, salada e molho de iogurte. Uma opção saborosa e suculenta para quem aprecia a autêntica cozinha árabe.",
       "porcao": "1 a 2 pessoas"
     },
     {
-      "foto": "https://fake-api-tau.vercel.app/efood/sakura_sushi_house//2.jpg",
-      "preco": 79.9,
-      "id": 12,
-      "nome": "Tempura de Legumes e Camarão",
-      "descricao": "O Tempura de Legumes e Camarão é uma opção deliciosa e crocante, composta por uma variedade de legumes e camarões frescos empanados em uma massa leve e frita até a perfeição. Acompanha um molho tentsuyu, à base de dashi, shoyu e mirin, para dar um toque especial ao prato.",
-      "porcao": "1 a 2 pessoas"
-    },
-    {
-      "foto": "https://fake-api-tau.vercel.app/efood/sakura_sushi_house//3.webp",
-      "preco": 69.9,
-      "id": 13,
-      "nome": "Teishoku de Tonkatsu",
-      "descricao": "O Teishoku de Tonkatsu é um prato tradicional japonês composto por uma fatia de lombo de porco empanado e frito, servido com arroz japonês, misoshiru (sopa de pasta de soja) e tsukemono (legumes em conserva). O molho tonkatsu, à base de frutas e legumes, adiciona um sabor agridoce irresistível.",
+      "foto": "https://fake-api-tau.vercel.app/efood/casa_delicias_arabes//3.webp",
+      "preco": 45.9,
+      "id": 10,
+      "nome": "Shawarma de Frango",
+      "descricao": "O Shawarma de Frango é preparado com finas fatias de frango marinadas em uma mistura de especiarias e grelhadas lentamente. Servido com pão pita, salada e molho tahine, este prato é uma opção saborosa e satisfatória para quem deseja saborear a autêntica comida de rua árabe.",
       "porcao": "1 pessoa"
     }
   ]
