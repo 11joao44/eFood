@@ -1,11 +1,11 @@
 import HeaderPage from '../../components/Blocks/HeaderPages'
-import Product from '../../components/Blocks/Product'
+import Restaurant from '../../components/Blocks/Restaurant'
 
-const Restaurant = () => (
+const RestaurantPage = () => (
   <>
     <HeaderPage />
-    <Product />
+    <Restaurant />
   </>
 )
 
-export default Restaurant
+export default RestaurantPage

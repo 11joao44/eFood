@@ -15,6 +15,26 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: ${cores.corBackground};
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
   }
 
   body {

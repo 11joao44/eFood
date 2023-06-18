@@ -15,9 +15,8 @@ export const CartContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 99.99%;
   height: 100%;
-  display: flex;
   justify-content: flex-end;
   display: none;
 
@@ -27,8 +26,8 @@ export const CartContainer = styled.div`
 `
 export const Sidebar = styled.aside`
   background-color: ${cores.corPrimary};
-  padding: 40px 16px 0 16px;
-  width: 360px;
+  width: 376px;
+  padding: 16px;
 `
 export const Product = styled.li`
   display: flex;

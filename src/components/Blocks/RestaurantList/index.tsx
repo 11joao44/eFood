@@ -3,21 +3,20 @@ import Tag from '../Tag'
 import { Description, Capa, Store } from './styles'
 import star from '../../../assets/images/star.svg'
 import { useAPI } from '../../../hooks/useAPI'
-import Product from '../Product'
+import { Restaurante } from '../../../types'
 
-type Props = {
-  titulo: string
-  tipo: string
-  avaliacao: string
-  id: number
-  descricao: string
-  capa: string
-}
-
-const Restaurant = () => {
-  const { data: restaurantes } = useAPI<Props[]>(
+const RestaurantList = () => {
+  const { data: restaurantes } = useAPI<Restaurante[]>(
     'https://fake-api-tau.vercel.app/api/efood/restaurantes'
   )
+
+  const getDescription = (descricao: string) => {
+    if (descricao.length > 270) {
+      return descricao.slice(0, 340) + '...'
+    }
+
+    return descricao
+  }
 
   if (!restaurantes) {
     return <h3>Carregando...</h3>
@@ -32,7 +31,7 @@ const Restaurant = () => {
             <Tag>{item.tipo}</Tag>
             <Description>
               <h3>{item.titulo}</h3>
-              <p>{item.descricao}</p>
+              <p>{getDescription(item.descricao)}</p>
               <span>
                 {item.avaliacao}
                 <img src={star} alt="Avaliação do prato" />
@@ -42,9 +41,8 @@ const Restaurant = () => {
           </Store>
         </Link>
       ))}
-      <Product />
     </>
   )
 }
 
-export default Restaurant
+export default RestaurantList

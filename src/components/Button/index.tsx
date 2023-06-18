@@ -2,11 +2,13 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 type Props = {
-  children: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: any
+  onClick?: () => void
 }
 
-const Button = ({ children }: Props) => {
-  return <ButtonStyle>{children}</ButtonStyle>
+const Button = ({ children, onClick }: Props) => {
+  return <ButtonStyle onClick={onClick}>{children}</ButtonStyle>
 }
 
 export default Button
@@ -14,10 +16,9 @@ export default Button
 const ButtonStyle = styled.button`
   background-color: ${cores.corSecondary};
   color: ${cores.corPrimary};
-  padding: 4px 0;
-  width: 100%;
+  padding: 4px 8px;
   border: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
 `

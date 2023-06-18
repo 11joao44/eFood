@@ -29,5 +29,6 @@ export const HeaderStyle = styled.div`
     font-weight: 900;
     font-size: 18px;
     line-height: 21.09px;
+    cursor: pointer;
   }
 `
