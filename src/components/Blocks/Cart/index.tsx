@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import * as S from './styles'
 import lixeira from '../../../assets/images/lixeira.svg'
 import Button from '../../Button'
-import { close } from '../../../store/reducers/cart'
+import { close, remove } from '../../../store/reducers/cart'
 import { RootReducer } from '../../../store'
 
 const Cart = () => {
@@ -11,8 +11,26 @@ const Cart = () => {
 
   const dispatch = useDispatch()
 
+  const formataPreco = (preco = 0) => {
+    return new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }).format(preco)
+  }
+
+  const getTotalPreco = () => {
+    return items.reduce((acumulador, valorAtual) => {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      return (acumulador += valorAtual.preco!)
+    }, 0)
+  }
+
   const openCart = () => {
     dispatch(close())
+  }
+
+  const removeItem = (id: number) => {
+    dispatch(remove(id))
   }
 
   return (
@@ -23,12 +41,16 @@ const Cart = () => {
           {items.map((item) => {
             return (
               <S.Product key={item.id}>
-                <img src={item.capa} alt="Foto da Pizza" />
+                <img src={item.foto} alt={item.nome} />
                 <div>
-                  <h3>{item.titulo}</h3>
-                  <p>R$ 60,90</p>
+                  <h3>{item.nome}</h3>
+                  <p>{formataPreco(item.preco)}</p>
                   <span>
-                    <img src={lixeira} alt="Lixeira" />
+                    <img
+                      onClick={() => removeItem(item.id)}
+                      src={lixeira}
+                      alt="Lixeira"
+                    />
                   </span>
                 </div>
               </S.Product>
@@ -37,7 +59,7 @@ const Cart = () => {
         </ul>
         <S.Price>
           <p>Valor Total</p>
-          <p>R$ 182,70</p>
+          <p>{formataPreco(getTotalPreco())}</p>
         </S.Price>
         <Button>Continuar com a compra</Button>
       </S.Sidebar>

@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 export const cores = {
   corPrimary: '#E66767',
   corSecondary: '#FFEBD9',
@@ -15,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+
 
     ::-webkit-scrollbar {
       width: 8px;
@@ -49,5 +55,9 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      max-width: 80%;
+    }
   }
 `

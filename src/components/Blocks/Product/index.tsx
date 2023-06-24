@@ -4,7 +4,7 @@ import { useState } from 'react'
 import close from '../../../assets/images/close.svg'
 import { useDispatch } from 'react-redux'
 import { open, add } from '../../../store/reducers/cart'
-import { Restaurante } from '../../../types'
+import { Cardapio } from '../../../types'
 
 type Props = {
   foto: string
@@ -12,7 +12,7 @@ type Props = {
   descricao: string
   porcao: string
   preco: number
-  rest: Restaurante
+  rest: Cardapio
 }
 
 const Product = ({ foto, nome, descricao, porcao, preco, rest }: Props) => {

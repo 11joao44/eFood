@@ -1,12 +1,17 @@
 import styled from 'styled-components'
 
-import { cores } from '../../../styles'
+import { breakpoints, cores } from '../../../styles'
 import { TagContainer } from '../Tag/styles'
 
 export const Store = styled.div`
   width: 472px;
   height: 400px;
   position: relative;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 300px;
+    height: 240px;
+  }
 
   a {
     font-weight: bold;

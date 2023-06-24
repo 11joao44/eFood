@@ -28,7 +28,7 @@ const ProductList = () => {
         {restaurant.cardapio.map((item) => (
           <li key={item.id}>
             <Product
-              rest={restaurant}
+              rest={item}
               foto={item.foto}
               nome={item.nome}
               descricao={item.descricao}

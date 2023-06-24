@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../../styles'
+import { breakpoints, cores } from '../../../styles'
 import background from '../../../assets/images/background.svg'
 
 export const Header = styled.header`
@@ -15,6 +15,16 @@ export const HeaderStyle = styled.div`
   height: 184px;
   padding: 64px 0;
 
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 128px;
+  }
+
+  img {
+    @media (max-width: ${breakpoints.tablet}) {
+      width: 80px;
+    }
+  }
+
   h2,
   span {
     color: ${cores.corPrimary};
@@ -22,6 +32,16 @@ export const HeaderStyle = styled.div`
     font-weight: 900;
     font-size: 16px;
     width: 96px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      width: 32px;
+    }
+  }
+
+  h2 {
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
+    }
   }
 
   a {
@@ -30,5 +50,9 @@ export const HeaderStyle = styled.div`
     font-size: 18px;
     line-height: 21.09px;
     cursor: pointer;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      font-size: 12px;
+    }
   }
 `

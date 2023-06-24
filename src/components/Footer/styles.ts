@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
 
 export const FooterStyle = styled.footer`
   background-color: ${cores.corSecondary};
@@ -15,6 +15,10 @@ export const FooterStyle = styled.footer`
     font-weight: 400;
     margin-top: 80px;
     line-height: 11.72px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      margin-top: 40px;
+    }
   }
 `
 
