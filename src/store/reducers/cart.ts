@@ -4,11 +4,17 @@ import { Cardapio } from '../../types'
 type CartState = {
   items: Cardapio[]
   isOpen: boolean
+  openCheck: boolean
+  openCard: boolean
+  openMensagem: boolean
 }
 
 const initialState: CartState = {
   items: [],
-  isOpen: false
+  isOpen: false,
+  openCheck: false,
+  openCard: false,
+  openMensagem: false
 }
 
 const cartSlice = createSlice({
@@ -32,9 +38,42 @@ const cartSlice = createSlice({
     },
     close: (state) => {
       state.isOpen = false
+    },
+    openCheck: (state) => {
+      state.openCheck = true
+    },
+    closeCheck: (state) => {
+      state.openCheck = false
+    },
+    openCard: (state) => {
+      state.openCard = true
+    },
+    closeCard: (state) => {
+      state.openCard = false
+    },
+    openMensage: (state) => {
+      state.openMensagem = true
+    },
+    closeMensage: (state) => {
+      state.openMensagem = false
+    },
+    clear: (state) => {
+      state.items = []
     }
   }
 })
 
-export const { add, open, close, remove } = cartSlice.actions
+export const {
+  add,
+  open,
+  close,
+  remove,
+  openCheck,
+  closeCheck,
+  openMensage,
+  closeMensage,
+  closeCard,
+  openCard,
+  clear
+} = cartSlice.actions
 export default cartSlice.reducer

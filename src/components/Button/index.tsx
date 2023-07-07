@@ -8,7 +8,11 @@ type Props = {
 }
 
 const Button = ({ children, onClick }: Props) => {
-  return <ButtonStyle onClick={onClick}>{children}</ButtonStyle>
+  return (
+    <ButtonStyle type="submit" onClick={onClick}>
+      {children}
+    </ButtonStyle>
+  )
 }
 
 export default Button
